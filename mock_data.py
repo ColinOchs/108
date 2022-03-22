@@ -62,7 +62,7 @@ catalog = [
         "title": "alphabet print",
         "price": 9.99,
         "stock":54,
-        "category": "framed prints",
+        "category": "framed_prints",
         "image": "1-frame.jpg",
         "discount": 0,
         
@@ -72,7 +72,7 @@ catalog = [
         "title": "fish print",
         "price": 9.99,
         "stock": 44,
-        "category": "framed prints",
+        "category": "framed_prints",
         "image": "2-frame.jpg",
         "discount": 0,
         
@@ -82,7 +82,7 @@ catalog = [
         "title": "fox print",
         "price": 9.99,
         "stock": 36,
-        "category": "framed prints",
+        "category": "framed_prints",
         "image": "3-frame.jpg",
         "discount": 0,
         
@@ -92,7 +92,7 @@ catalog = [
         "title": "location print",
         "price": 9.99,
         "stock": 26,
-        "category": "framed prints",
+        "category": "framed_prints",
         "image": "6-frame.jpg",
         "discount": 0,
         

@@ -59,4 +59,49 @@ def get_by_id(id):
     return abort(404, "no such product can be located")
 
 
+
+# Get /api/product/cheapest
+# should return product with lowest price
+# if the price of your prod is lower than the price of your solution variable
+#     set your solutions variable equal to your prod
+
+# return solution
+
+@app.route("/api/product/cheapest")
+def cheapest_product():
+    solution = catalog[0]
+    for prod in catalog:
+        if prod["price"] < solution["price"]: 
+            solution=prod
+    return json.dumps(solution)
+
+
+#create a variable(solution) with on of the elements from the list
+# create a for loop to travel catalog
+@app.get("/api/categories")
+def unique_categories():
+    categories = []
+    for prod in catalog:
+        cat = prod["category"]
+        if not cat in categories:
+            categories.append(cat)
+    return json.dumps(categories)
+
+
+# Ticket 2345
+# Create and endpoint that allow the client to get all the products
+# for an specified category 
+#\
+@app.get("/api/catalog/<category>")
+def prods_by_category(category):
+    result = []
+    for prod in catalog:
+        if prod["category"] == category:
+            result.append(prod)
+
+    return json.dumps(result)
+
+
+
+
 app.run(debug=True)
