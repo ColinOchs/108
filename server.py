@@ -9,7 +9,7 @@ app = Flask("Server")
 
 @app.route("/")
 def home():
-    return "Hey, Hey! Let's play with my Python"
+    return "Greetings, welcome to the website "
 
 @app.route("/me")
 def about_me():
